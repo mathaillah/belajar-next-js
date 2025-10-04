@@ -11,7 +11,7 @@ type ProductType = {
 
 const ProductPage = () => {
   const [isLogin, setIsLogin] = useState(true);
-  const [prducts, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
   const { push } = useRouter();
 
   useEffect(() => {
@@ -24,14 +24,14 @@ const ProductPage = () => {
     fetch("/api/product")
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data.data)
+        setProducts(data.data);
       });
   }, []);
 
   return (
     <div>
       <h1>Product Page</h1>
-      {prducts.map((product : ProductType) =>(
+      {products.map((product: ProductType) => (
         <div key={product.id}>{product.name}</div>
       ))}
     </div>
