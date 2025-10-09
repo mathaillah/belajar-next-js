@@ -6,7 +6,7 @@ const Custom404: NextPage = () => {
     <div className={styles.error}>
       <img 
         src="/not_found.png" 
-        alt="404" 
+        alt="404" //10/10/25
         className={styles.image} 
       />
       <div>Halaman Tidak ditemukan</div>
